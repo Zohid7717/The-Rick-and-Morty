@@ -5,6 +5,7 @@ import { useGlobalContext } from '../../Untils/Context/Context';
 const Search = () => {
   const { searchName, setSearchName } = useGlobalContext()
   const getSearchName = (e) => {
+    
     setSearchName(e.target.value)
   }
   return (

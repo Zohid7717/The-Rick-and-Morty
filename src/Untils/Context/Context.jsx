@@ -21,7 +21,6 @@ const AppProvider = ({ children }) => {
     }
     fetchData()
   }, [])
-  // const [state, setstate] = useState(initialState);
   return (
     <AppContext.Provider value={{ results, setResults, itemOffset, setItemOffset, info, setInfo, searchName, setSearchName }}>
       {children}

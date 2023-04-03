@@ -8,11 +8,10 @@ const Pagination = () => {
   const { itemOffset, setItemOffset } = useGlobalContext()
   const { info, setInfo } = useGlobalContext()
   let pageCount = info.pages;
-  const items = [];
+  const currentItems = [];
   for (let i = 1; i <= pageCount; i++){
-    items.push({id: i, value: i})
+    currentItems.push({id: i, value: i})
   }
-  const currentItems = items;
   const handleDageClick = (e) => {
     const newOffset = (e.target.value);
     setItemOffset(newOffset);

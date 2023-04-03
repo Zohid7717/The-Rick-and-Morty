@@ -4,10 +4,9 @@ import { useGlobalContext } from '../../Untils/Context/Context';
 
 const CardCatalog = () => {
   const { results, setResults } = useGlobalContext()
-  // const [updateInstace, setUpdateInstace] = useState([]);
   return (
     <div className="home__main-cards">
-      {results.map(item => <CardItem key={item.id} id={item.id} item={item} />)}
+      {results ? (results.map(item => <CardItem key={item.id} id={item.id} item={item} />)) : <p> Character is not defined</p>}
     </div>
   );
 }

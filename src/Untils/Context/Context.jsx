@@ -2,9 +2,10 @@ import { useContext, createContext, useState, useEffect } from "react";
 
 const AppContext = createContext();
 const AppProvider = ({ children }) => {
+  const [searchName, setSearchName] = useState('')
   const [results, setResults] = useState([]);
   const [itemOffset, setItemOffset] = useState(1);
-  let URL = `https://rickandmortyapi.com/api/character/?page=${itemOffset}`
+  let URL = `https://rickandmortyapi.com/api/character/?page=${itemOffset}&name=${searchName}`
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetch(URL).then(res => res.json())
@@ -22,7 +23,7 @@ const AppProvider = ({ children }) => {
   }, [])
   // const [state, setstate] = useState(initialState);
   return (
-    <AppContext.Provider value={{ results, setResults, itemOffset, setItemOffset, info, setInfo }}>
+    <AppContext.Provider value={{ results, setResults, itemOffset, setItemOffset, info, setInfo, searchName, setSearchName }}>
       {children}
     </AppContext.Provider>
   )

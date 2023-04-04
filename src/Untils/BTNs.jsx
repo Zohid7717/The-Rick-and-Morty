@@ -2,12 +2,12 @@ import React from 'react';
 import { useGlobalContext } from './Context/Context';
 
 const BTNs = ({ item }) => {
-  const { status, setStatus } = useGlobalContext()
-  const { setInfo} = useGlobalContext()
+  
+  const { setInfo } = useGlobalContext()
+  
+  
   const getValue = (e) => {
     setStatus((item).charAt(0).toUpperCase() + (item).slice(1))
-    console.log(status)
-    setInfo(1)
   }
   return (
     <label key={item.id} className={`filter__item-label`}>{(item).charAt(0).toUpperCase()+(item).slice(1)}

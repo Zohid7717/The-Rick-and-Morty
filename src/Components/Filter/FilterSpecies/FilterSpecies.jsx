@@ -8,7 +8,6 @@ const FilterSpecies = () => {
   
   return (
     <div className='filter__title-w'>
-      <h2 className='filter__title'>Filter by species</h2>
       <div className="filter__items">
         {species.map(item =>
           <BTNs key={item.id} item={item.name} />

@@ -2,6 +2,7 @@ import React from 'react';
 import BTNs from '../../../Untils/BTNs';
 
 const FilterStatus = () => {
+  
   const status = [
     {
       id: 0,
@@ -16,7 +17,6 @@ const FilterStatus = () => {
   ];
   return (
     <div className='filter__title-w'>
-      <h2 className='filter__title filter-active'>Filter by status</h2>
       <div className="filter__items">
         {status.map(item => 
           <BTNs key={item.id} item={item.name}/>

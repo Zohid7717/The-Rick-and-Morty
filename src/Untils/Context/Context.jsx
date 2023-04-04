@@ -5,7 +5,8 @@ const AppProvider = ({ children }) => {
   const [searchName, setSearchName] = useState('')
   const [results, setResults] = useState([]);
   const [itemOffset, setItemOffset] = useState(1);
-  let URL = `https://rickandmortyapi.com/api/character/?page=${itemOffset}&name=${searchName}`
+  const [status, setStatus] = useState('')
+  let URL = `https://rickandmortyapi.com/api/character/?page=${itemOffset}&name=${searchName}&status=${status}`
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetch(URL).then(res => res.json())
@@ -17,12 +18,12 @@ const AppProvider = ({ children }) => {
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetch(URL).then(res => res.json())
-      setInfo(data.info)
+      setInfo(data.info.pages)
     }
     fetchData()
   }, [])
   return (
-    <AppContext.Provider value={{ results, setResults, itemOffset, setItemOffset, info, setInfo, searchName, setSearchName }}>
+    <AppContext.Provider value={{ results, setResults, itemOffset, setItemOffset, info, setInfo, searchName, setSearchName, status, setStatus }}>
       {children}
     </AppContext.Provider>
   )

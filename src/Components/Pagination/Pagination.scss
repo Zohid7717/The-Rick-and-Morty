@@ -1,13 +1,30 @@
 .pagination{
+  margin-bottom: 40px;
+  gap: 15px;
   display: flex;
   justify-content: center;
-  &__item{
-    border: 1px solid aqua;
-    padding: 5px;
-    background-color: transparent;
+  &__prev-btn,
+  &__next-btn,
+  &__page-link{
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px 15px;
+    border: 2px solid aqua;
     transition: 0.3s ease-in-out;
     &:hover{
       background-color: aqua;
     }
+  }
+  &__page,
+  &__prev-btn-wrap,
+  &__next-btn-wrap{
+    display: flex;
+  }
+  &__active-page{
+    background-color: aqua;
+  }
+  &__dis-page{
+    background-color: rgb(202, 228, 228);
+    border: 2px solid rgb(202, 228, 228);
   }
 }

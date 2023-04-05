@@ -37,10 +37,17 @@
   }
   &__more{
     display: inline-flex;
-    
     background-color: rgb(74, 74, 172);
     padding: 5px 10px;
     color: white;
     border-radius: 5px ;
+  }
+  &__btn-wrap{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__like{
+    cursor: pointer;
   }
 }

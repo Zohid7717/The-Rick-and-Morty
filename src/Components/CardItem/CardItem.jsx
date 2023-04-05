@@ -1,7 +1,8 @@
 import React from 'react';
 import './CardItem.scss'
+import { Link } from 'react-router-dom';
 
-const CardItem = ({ item, id }) => {
+const CardItem = ({ item, id, page }) => {
   return (
     <div className='cardItem'>
       <img src={item.image} alt="" />
@@ -16,7 +17,7 @@ const CardItem = ({ item, id }) => {
         <p className="cardItem__last-loc-title">
           {item.location.name}
         </p>
-        <button className="cardItem__more">More</button>
+        <Link to={`${id}`} className="cardItem__more">More</Link>
       </div>
     </div>
   );

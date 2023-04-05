@@ -1,12 +1,9 @@
-import React, {useEffect, useState} from 'react';
-import { useGlobalContext } from '../../Untils/Context/Context';
+import React from 'react';
 import ReactPaginate from 'react-paginate';
 import './Pagination.scss';
 
 
-const Pagination = () => {
-  const { itemOffset, setItemOffset } = useGlobalContext()
-  const { info, setInfo } = useGlobalContext()
+const Pagination = ({ info, setItemOffset }) => {
   
   return <ReactPaginate
     className='pagination'

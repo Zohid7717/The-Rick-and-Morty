@@ -93,40 +93,47 @@ h6 {
 
 
 /*-----------универсальные настройки------------*/
-body{
+body {
   font-family: Nunito;
   font-size: 18px;
 }
-.u-container{
+
+.u-container {
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 20px;
 }
-.home{
+
+.home {
   display: flex;
   margin-top: 40px;
-  h1{
+
+  h1 {
     font-size: 35px;
     font-weight: bold;
     text-align: center;
   }
-  &__wrapper{
+
+  &__wrapper {
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
-  &__main{
+
+  &__main {
     display: flex;
     gap: 15px;
     align-items: start;
   }
-  &__main-cards{
+
+  &__main-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
     gap: 20px;
   }
 }
+
 .filter {
   display: flex;
   flex-direction: column;
@@ -135,4 +142,38 @@ body{
   min-width: 285px;
   max-width: 285px;
   align-items: center;
+}
+
+.episodes {
+  display: flex;
+  margin-top: 40px;
+
+  h2 {
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__main {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__pick {
+    min-width: 285px;
+
+    h4 {
+      font-size: 25px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+  }
 }

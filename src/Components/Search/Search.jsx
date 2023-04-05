@@ -2,9 +2,7 @@ import React from 'react';
 import './Search.scss'
 import { useGlobalContext } from '../../Untils/Context/Context';
 
-const Search = () => {
-  const { searchName, setSearchName } = useGlobalContext()
-  const { info, setInfo } = useGlobalContext()
+const Search = ({ setSearchName, setInfo }) => {
   const getSearchName = (e) => {
     setSearchName(e.target.value)
     if (e.target.value) {
